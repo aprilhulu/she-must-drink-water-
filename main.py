@@ -3,18 +3,19 @@ from discord.ext import tasks
 import random
 
 
-TOKEN = "ここにボットのトークン"
+TOKEN ="トークンを貼る"
+
+CHANNEL_ID = #チャンネルIDをはる
+
+USER_ID = #ユーザーIDを貼る
 
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 
-CHANNEL_ID = 000#ここにチャンネルid
-USER_ID = 000#ここにユーザーid
 @client.event
 async def on_ready():
   print(f'{client.user}がログインしました') 
-  await tree.sync()
   mugen.start()
 
 @tasks.loop(seconds = 1200)
