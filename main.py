@@ -30,8 +30,7 @@ if is_file:
   async def on_ready():
     print(f'{client.user}がログインしました') 
     await tree.sync()
-    if stopper == 0:
-        mugen.start()
+    mugen.start()
 
   @tree.command(name="stop", description="通知の停止コマンドです ")
   async def stop(interaction: discord.Interaction):
